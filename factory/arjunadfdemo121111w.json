@@ -1,0 +1,9 @@
+{
+	"name": "arjunadfdemo121111w",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0dc7a730-e1aa-442c-94c9-90c2419d2c2e",
+		"tenantId": "84f1e4ea-8554-43e1-8709-f0b8589ea118"
+	}
+}
