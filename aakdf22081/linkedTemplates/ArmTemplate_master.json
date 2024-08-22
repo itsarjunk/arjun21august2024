@@ -1,0 +1,196 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "aakdf22081"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"AzureSqlDatabase2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase2'"
+		},
+		"LSforsingsql_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LSforsingsql'"
+		},
+		"LSforsink_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LSforsink'"
+		},
+		"LSforsource_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LSforsource'"
+		},
+		"lsforsourcefiles003_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'lsforsourcefiles003'"
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sa0608n.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "arjun21.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "db21"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "arjun21"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "arjunserver21.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "dbarjunnew21"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "arjunserver21"
+		},
+		"LSforsingsql_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server2208.database.windows.net"
+		},
+		"LSforsingsql_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "workspacearjun"
+		},
+		"LSforsingsql_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "db2208"
+		},
+		"LSforsink_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "server2208.database.windows.net"
+		},
+		"LSforsink_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "workspacearjun"
+		},
+		"LSforsink_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "db2208"
+		},
+		"LSforsource_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sa0608.dfs.core.windows.net/"
+		},
+		"lsforsourcefiles003_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://sa0608.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "aakdf22081_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"AzureSqlDatabase2_password": {
+						"value": "[parameters('AzureSqlDatabase2_password')]"
+					},
+					"LSforsingsql_password": {
+						"value": "[parameters('LSforsingsql_password')]"
+					},
+					"LSforsink_password": {
+						"value": "[parameters('LSforsink_password')]"
+					},
+					"LSforsource_accountKey": {
+						"value": "[parameters('LSforsource_accountKey')]"
+					},
+					"lsforsourcefiles003_accountKey": {
+						"value": "[parameters('lsforsourcefiles003_accountKey')]"
+					},
+					"AzureDataLakeStorage1_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase2_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase2_properties_typeProperties_userName')]"
+					},
+					"LSforsingsql_properties_typeProperties_server": {
+						"value": "[parameters('LSforsingsql_properties_typeProperties_server')]"
+					},
+					"LSforsingsql_properties_typeProperties_database": {
+						"value": "[parameters('LSforsingsql_properties_typeProperties_database')]"
+					},
+					"LSforsingsql_properties_typeProperties_userName": {
+						"value": "[parameters('LSforsingsql_properties_typeProperties_userName')]"
+					},
+					"LSforsink_properties_typeProperties_server": {
+						"value": "[parameters('LSforsink_properties_typeProperties_server')]"
+					},
+					"LSforsink_properties_typeProperties_database": {
+						"value": "[parameters('LSforsink_properties_typeProperties_database')]"
+					},
+					"LSforsink_properties_typeProperties_userName": {
+						"value": "[parameters('LSforsink_properties_typeProperties_userName')]"
+					},
+					"LSforsource_properties_typeProperties_url": {
+						"value": "[parameters('LSforsource_properties_typeProperties_url')]"
+					},
+					"lsforsourcefiles003_properties_typeProperties_url": {
+						"value": "[parameters('lsforsourcefiles003_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

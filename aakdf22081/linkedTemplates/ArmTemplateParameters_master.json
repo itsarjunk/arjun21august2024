@@ -1,0 +1,81 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "aakdf22081"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
+		"LSforsingsql_password": {
+			"value": ""
+		},
+		"LSforsink_password": {
+			"value": ""
+		},
+		"LSforsource_accountKey": {
+			"value": ""
+		},
+		"lsforsourcefiles003_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://sa0608n.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "arjun21.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "db21"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "arjun21"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "arjunserver21.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "dbarjunnew21"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "arjunserver21"
+		},
+		"LSforsingsql_properties_typeProperties_server": {
+			"value": "server2208.database.windows.net"
+		},
+		"LSforsingsql_properties_typeProperties_database": {
+			"value": "workspacearjun"
+		},
+		"LSforsingsql_properties_typeProperties_userName": {
+			"value": "db2208"
+		},
+		"LSforsink_properties_typeProperties_server": {
+			"value": "server2208.database.windows.net"
+		},
+		"LSforsink_properties_typeProperties_database": {
+			"value": "workspacearjun"
+		},
+		"LSforsink_properties_typeProperties_userName": {
+			"value": "db2208"
+		},
+		"LSforsource_properties_typeProperties_url": {
+			"value": "https://sa0608.dfs.core.windows.net/"
+		},
+		"lsforsourcefiles003_properties_typeProperties_url": {
+			"value": "https://sa0608.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
