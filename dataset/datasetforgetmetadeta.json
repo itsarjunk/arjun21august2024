@@ -1,0 +1,22 @@
+{
+	"name": "datasetforgetmetadeta",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lsforsourcefiles003",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "input"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
